@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  .dark {
+    @apply bg-[#1a1a1a] text-[#e5e5e5];
+  }
+
+  ::selection {
+    @apply bg-black text-white dark:bg-white dark:text-black;
+  }
+}
